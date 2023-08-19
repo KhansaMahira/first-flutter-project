@@ -1,17 +1,18 @@
-[
-    {
-        "judul": "Pengalaman Kerja",
-        "imageUrl": "https://media.discordapp.net/attachments/1107668994477019218/1137735995559772290/Logo_transparent.png?width=680&height=676",
-        "posisi": "Editorial Marketing Staff",
-        "mulai": "April 2023",
-        "selesai": "Present"
-    },
-    {
-        "judul": "Pengalaman Kerja",
-        "imageUrl": "https://educare.cs.ui.ac.id/_next/image?url=%2Fimages%2Flogo-educare.png&w=96&q=75",
-        "posisi": "Human Resources Officer",
-        "mulai": "December 2022",
-        "selesai": "April 2023"
-    }
-]
-    
+{
+    "experiences": [
+        {
+            "judul": "Pengalaman Kerja",
+            "imageUrl": "https://media.discordapp.net/attachments/1107668994477019218/1137735995559772290/Logo_transparent.png?width=680&height=676",
+            "posisi": "Editorial Marketing Staff",
+            "mulai": "April 2023",
+            "selesai": "Present"
+        },
+        {
+            "judul": "Pengalaman Kerja",
+            "imageUrl": "https://educare.cs.ui.ac.id/_next/image?url=%2Fimages%2Flogo-educare.png&w=96&q=75",
+            "posisi": "Human Resources Officer",
+            "mulai": "December 2022",
+            "selesai": "April 2023"
+        }
+    ]
+}

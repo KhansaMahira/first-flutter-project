@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 /**
  * author: Khansa Mahira
- * since: August 5, 2023
+ * since: August 19, 2023
  */
 
 class ProfilPage extends StatefulWidget {
@@ -65,8 +65,9 @@ class _ProfilPageState extends State<ProfilPage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text(
-              'Saya merupakan seorang mahasiswa jurusan sistem informasi. Saya gemar mempelajari hal-hal baru terutama yang berhubungan dengan teknologi. Saya juga mampu menyesuaikan diri dengan lingkungan dan mengorganisir waktu saya untuk belajar dan melakukan kegiatan bermanfaat lainnya.\n'
+            Container(
+              margin: EdgeInsets.all(20),
+              child: Text('Saya merupakan seorang mahasiswa jurusan sistem informasi. Saya gemar mempelajari hal-hal baru terutama yang berhubungan dengan teknologi. Saya juga mampu menyesuaikan diri dengan lingkungan dan mengorganisir waktu saya untuk belajar dan melakukan kegiatan bermanfaat lainnya.\n'),
             ),
             ElevatedButton(
               child: Text('Lanjut ke Pengalaman Kerja'),
