@@ -32,17 +32,24 @@ class _PengalamanPageState extends State<PengalamanPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Pengalaman Kerja"),
-      ),
-      body: SafeArea(
-        child: Padding(
+    if (pengalamanKerja == null ||
+      pengalamanVolunteer == null ||
+      riwayatSekolah == null) {
+    // Return a loading indicator or any other appropriate widget
+    return CircularProgressIndicator();
+    } else {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text("Pengalaman Kerja"),
+        ),
+        body: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
             children: [
-              SingleChildScrollView(
+              SizedBox(
+                height: 150, // Specify the desired height
                 child: ListView.builder(
+                  shrinkWrap: true,
                   itemCount: pengalamanKerja!.experiences.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
@@ -56,11 +63,13 @@ class _PengalamanPageState extends State<PengalamanPage> {
                       selesai: experience.selesai,
                     );
                   },
-                )
+                ),
               ),
-              Text("Volunteer Experiences", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-              SingleChildScrollView(
+              Text("Volunteer Experiences", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),),
+              SizedBox(
+                height: 150, // Specify the desired height
                 child: ListView.builder(
+                  shrinkWrap: true,
                   itemCount: pengalamanVolunteer!.experiences.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
@@ -74,11 +83,13 @@ class _PengalamanPageState extends State<PengalamanPage> {
                       selesai: experience.selesai,
                     );
                   },
-                )
+                ),
               ),
-              Text("School Experiences", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-              SingleChildScrollView(
+              Text("School Experiences", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),),
+              SizedBox(
+                height: 150, // Specify the desired height
                 child: ListView.builder(
+                  shrinkWrap: true,
                   itemCount: riwayatSekolah!.experiences.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
@@ -92,13 +103,53 @@ class _PengalamanPageState extends State<PengalamanPage> {
                       selesai: experience.selesai,
                     );
                   },
-                )
+                ),
+              ),
+              Text("Volunteer Experiences", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),),
+              SizedBox(
+                height: 150, // Specify the desired height
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: pengalamanVolunteer!.experiences.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    final ExperienceDataModel experience = pengalamanVolunteer!.experiences[index];
+
+                    return ExperienceProfileCard(
+                      judul: experience.judul,
+                      imageUrl: experience.imageUrl,
+                      posisi: experience.posisi,
+                      mulai: experience.mulai,
+                      selesai: experience.selesai,
+                    );
+                  },
+                ),
+              ),
+              Text("School Experiences", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),),
+              SizedBox(
+                height: 150, // Specify the desired height
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: riwayatSekolah!.experiences.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    final ExperienceDataModel experience = riwayatSekolah!.experiences[index];
+
+                    return ExperienceProfileCard(
+                      judul: experience.judul,
+                      imageUrl: experience.imageUrl,
+                      posisi: experience.posisi,
+                      mulai: experience.mulai,
+                      selesai: experience.selesai,
+                    );
+                  },
+                ),
               ),
             ],
           ),
         ),
-      ),
-    );
+      );
+    }
   }
 
   Future<void> readJson() async {

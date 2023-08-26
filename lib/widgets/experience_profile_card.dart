@@ -29,8 +29,8 @@ class ExperienceProfileCard extends StatelessWidget {
         Text(judul),
         Image.network(
           imageUrl,
-          width: 200,
-          height: 200,
+          width: 50,
+          //height: 100,
         ),
         Text(posisi),
         Text(mulai),

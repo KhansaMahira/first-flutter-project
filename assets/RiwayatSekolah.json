@@ -1,18 +1,25 @@
 {
     "experiences": [
         {
-            "judul": "Pengalaman Kerja",
+            "judul": "Pengalaman Universitas",
             "imageUrl": "https://drive.google.com/file/d/1zLQGqyRScG2Qw9e8EqubYWnOWPI36rxP/view?usp=sharing",
             "posisi": "Student",
             "mulai": "August 2023",
             "selesai": "Present"
         },
         {
-            "judul": "Pengalaman Kerja",
+            "judul": "Pengalaman Sekolah",
             "imageUrl": "https://drive.google.com/file/d/13zoToVguqbhNLoTdYCKzRu9BKIrbOgP7/view?usp=sharing",
             "posisi": "Student",
             "mulai": "July 2019",
             "selesai": "May 2022"
+        },
+        {
+            "judul": "Pengalaman Sekolah",
+            "imageUrl": "https://drive.google.com/file/d/11_wldlCbihzS-KkIAQiUUYxqqLa5QgWj/view?usp=sharing",
+            "posisi": "Student",
+            "mulai": "July 2016",
+            "selesai": "May 2019"
         }
     ]
 }
